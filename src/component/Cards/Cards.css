@@ -1,0 +1,19 @@
+.card-list{
+    display: block;
+    padding: 0;
+    list-style-type: none;
+}
+.card-item{
+    width: 100%;
+    padding: 15px 30px;
+    border: 1px solid #c7c7c7;
+    border-radius: 8px;
+    margin: 0 1rem 1rem 0;
+}
+.card-item h2, .card-item p{
+    margin: 0;
+}
+.card-item p{
+    display: inline-block;
+    margin: 15px 35px 15px 10px;
+}
