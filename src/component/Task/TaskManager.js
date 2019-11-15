@@ -36,13 +36,10 @@ class TaskManager extends React.Component {
         
         this.setState({data: newArr});
     }
-    
-    deleteItem = (index) =>{
+    deleteItem = (id) =>{
         const data = [...this.state.data];
-        console.log(index)
+        const index = data.findIndex(data => data.id === id);
         data.splice(index, 1);
-
-
         this.setState({
             data: data
         })
@@ -61,7 +58,7 @@ class TaskManager extends React.Component {
                             status={item.status} 
                             key={index} 
                             handleChange={() => this.changeStatus(index)}
-                            deleteCard={() => this.deleteItem(index)}/>
+                            deleteCard={() => this.deleteItem(item.desc.id)}/>
                         )
                     })}
                 </ul>
